@@ -8,21 +8,21 @@ const Testimonials = () => {
       role: "Product Manager at TechFlow",
       text: "Firly transformed our outdated platform into a modern, lightning-fast application. The attention to detail and UI/UX expertise is unmatched.",
       rating: 5,
-      avatar: "S"
+      avatar: "https://randomuser.me/api/portraits/women/44.jpg"
     },
     {
       name: "Michael Chen",
       role: "Founder of StartupX",
       text: "Working with Firly was a breeze. They delivered the project ahead of schedule and the code quality was exceptional. Highly recommended!",
       rating: 5,
-      avatar: "M"
+      avatar: "https://randomuser.me/api/portraits/men/32.jpg"
     },
     {
       name: "Emma Williams",
       role: "Creative Director",
       text: "The web animations and glassmorphism effects Firly implemented gave our brand the premium feel we were looking for.",
       rating: 5,
-      avatar: "E"
+      avatar: "https://randomuser.me/api/portraits/women/68.jpg"
     }
   ];
 
@@ -55,7 +55,9 @@ const Testimonials = () => {
               <p className="testimonial-text">"{review.text}"</p>
               
               <div className="testimonial-author">
-                <div className="author-avatar">{review.avatar}</div>
+                <div className="author-avatar">
+                  <img src={review.avatar} alt={review.name} />
+                </div>
                 <div className="author-info">
                   <h4 className="author-name">{review.name}</h4>
                   <p className="author-role">{review.role}</p>
