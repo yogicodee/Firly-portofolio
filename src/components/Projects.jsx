@@ -8,21 +8,24 @@ const Projects = () => {
       description: "A full-stack e-commerce solution with modern UI, robust shopping cart, and seamless checkout experience.",
       techStack: ["React", "Node.js", "Stripe", "MongoDB"],
       github: "https://github.com",
-      live: "https://example.com"
+      live: "https://example.com",
+      image: "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "AI Chat Application",
       description: "Real-time chat interface integrating advanced language models with dark mode support and message history saving.",
       techStack: ["React", "OpenAI API", "Firebase"],
       github: "https://github.com",
-      live: "https://example.com"
+      live: "https://example.com",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Portfolio Template",
       description: "A customizable, performant portfolio template designed for developers to showcase their work effectively.",
       techStack: ["Vite", "React", "CSS3"],
       github: "https://github.com",
-      live: "https://example.com"
+      live: "https://example.com",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ];
 
@@ -34,6 +37,9 @@ const Projects = () => {
         <div className="projects-grid">
           {projectList.map((project, index) => (
             <div className="project-card glass-panel hover-lift" key={index}>
+              <div className="project-image-wrapper">
+                <img src={project.image} alt={project.title} className="project-image" />
+              </div>
               <div className="project-content">
                 <div className="project-top">
                   <div className="folder-icon">
